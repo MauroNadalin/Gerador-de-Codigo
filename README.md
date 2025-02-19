@@ -37,9 +37,9 @@
  - Para contas já utilizadas é preciso comprar créditos. No nosso caso como a conta já era utilizada a algum tempo, fizemos a compra de créditos para testar o projeto.
 ### [Configurar API OpenAi](https://github.com/MauroNadalin/Gerador-de-Codigo/blob/main/codex.js)
 
- - ### [Criar Front-end](https://github.com/MauroNadalin/Gerador-de-Codigo/blob/main/index.html.js)
-### [Criar Back-end](https://github.com/MauroNadalin/Gerador-de-Codigo/blob/main/server.js)
-### Teste da plataforma
+ - # [Criar Front-end](https://github.com/MauroNadalin/Gerador-de-Codigo/blob/main/index.html.js)
+ - # [Criar Back-end](https://github.com/MauroNadalin/Gerador-de-Codigo/blob/main/server.js)
+ - # Teste da plataforma
  - Escolher na lista drop down uma linguagem, digitar o contexto na caixa de texto e clicar em gerar código.
 
 
