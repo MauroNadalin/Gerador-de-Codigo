@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Geração de Código</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ddd;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gere seu Código</h1>
+  <form id="codigoForm">
+    <label for="tipoCodigo">Tipo de Código:</label>
+    <select id="tipoCodigo" name="tipoCodigo">
+      <option value="html">HTML</option>
+      <option value="php">PHP</option>
+      <option value="sql">SQL</option>
+      <option value="js">JavaScript</option>
+    </select>
+
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" required></textarea>
+
+    <button type="submit">Gerar Código</button>
+  </form>
+
+  <h2>Código Gerado:</h2>
+  <pre id="codigoGerado"></pre>
+
+  <div id="loading" style="display: none;">Carregando...</div>
+  <div id="error" style="color: red; display: none;"></div>
+
+  <script>
+    document.getElementById('codigoForm').addEventListener('submit', async function(event) {
+      event.preventDefault(); // Evitar o envio tradicional do formulário
+
+      const tipoCodigo = document.getElementById('tipoCodigo').value;
+      const descricao = document.getElementById('descricao').value;
+
+      // Mostrar "Carregando..." enquanto a requisição está sendo processada
+      document.getElementById('loading').style.display = 'block';
+      document.getElementById('error').style.display = 'none';
+      document.getElementById('codigoGerado').textContent = ''; // Limpar código anterior
+
+      try {
+        // Enviar dados para o servidor
+        const response = await fetch('/gerar-codigo', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ tipoCodigo, descricao }),
+        });
+
+        // Verificar se a resposta foi bem-sucedida
+        if (!response.ok) {
+          throw new Error('Erro ao gerar código');
+        }
+
+        // Processar a resposta do servidor
+        const data = await response.json();
+        console.log(data + 'retornou');
+        
+        // Exibir o código gerado na tela
+        if (data.codigo) {
+          document.getElementById('codigoGerado').textContent = data.codigo;
+        } else {
+          document.getElementById('error').textContent = 'Erro: Nenhum código gerado.';
+        }
+      } catch (error) {
+        document.getElementById('error').textContent = `Erro: ${error.message}`;
+      } finally {
+        // Esconder "Carregando..." quando a requisição for concluída
+        document.getElementById('loading').style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
