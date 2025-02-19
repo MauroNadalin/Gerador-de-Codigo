@@ -28,12 +28,16 @@
  - (express para criar servidor http, axios para fazer requisições à API, vue para criar interface de usuário).
 
 # Criar conta na OpenAi
- = Acesse o site da OpenAI: https://beta.openai.com/signup/.
- = Crie uma conta ou faça login se já tiver uma conta.
- = Após logar, vá para a seção de API e copie sua chave de API (API Key).
- = Para contas iniciais é oferecido crédito de $18,00.
- = Para contas já utilizadas é preciso comprar créditos. No nosso caso como a conta já era utilizada a algum tempo, fizemos a compra de créditos para testar o projeto.
- 
+ - Acesse o site da OpenAI: https://beta.openai.com/signup/.
+ - Crie uma conta ou faça login se já tiver uma conta.
+ - Após logar, vá para a seção de API e copie sua chave de API (API Key).
+ - Para contas iniciais é oferecido crédito de $18,00.
+ - Para contas já utilizadas é preciso comprar créditos. No nosso caso como a conta já era utilizada a algum tempo, fizemos a compra de créditos para testar o projeto.
+# [Configurar API OpenAi](https://github.com/MauroNadalin/Gerador-de-Codigo/blob/main/codex.js)
 
+# [Criar Front-end](https://github.com/MauroNadalin/Gerador-de-Codigo/blob/main/index.html.js)
+# [Criar Back-end](https://github.com/MauroNadalin/Gerador-de-Codigo/blob/main/server.js)
+# Teste da plataforma
+ - Escolher na lista drop down uma linguagem, digitar o contexto na caixa de texto e clicar em gerar código.
 
 
