@@ -5,4 +5,10 @@
 # Como preparar o Ambiente
 
 ### Principais ações
-![image](https://github.com/user-attachments/assets/ab916fcc-a704-432a-b663-6d0583926734)
+ - Configurar ambiente
+ - Criar conta na OpenAi
+ - Configurar API OpenAi (codex.js)
+ - Criar Front-end
+ - Criar Back-end
+ - Teste da plataforma
+
