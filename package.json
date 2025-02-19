@@ -1,0 +1,19 @@
+{
+  "name": "eng_prompt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "openai": "^4.85.1",
+    "react": "^19.0.0",
+    "vue": "^3.5.13"
+  }
+}
