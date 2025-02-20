@@ -2,7 +2,7 @@ const { response } = require('express');
 const  { OpenAI } = require ('openai');
 
 const openai = new OpenAI({
-  apiKey: "secret-key",
+  apiKey: "secret-key", // coloque aqui sua chave 
 });
 
 // Função para gerar código
